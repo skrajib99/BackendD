@@ -1,0 +1,453 @@
+/* .test{
+    background-color: aqua;
+    height: 200px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-align: center; */
+    /* color: white; */
+}
+
+#home{
+    width: 100%;
+    /* background-image: url({{ "static", filename = 'Images/img1.jpg' }}); */
+    background: url("Images/img1.jpg");
+    background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+}
+#home .image-overlay{
+    width: 100%;
+    background-color: rgba(5, 5, 5, 0.6);
+    object-fit: cover;
+    
+}
+
+.wrap-sections{
+    padding: 2% 8%;
+}
+
+#nav-section{
+    /* background-color: rgb(0, 0, 0,0.3); */
+}
+
+#nav-section .logo-name{
+    color: #ffd92e;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+}
+
+#nav-section li a{
+    color: white;
+    
+}
+
+.nav-item {
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+#nav-section li .active{
+    color: #ffd92e;
+}
+#nav-section li a:hover{
+    
+    color: #ffd92e;
+    cursor: pointer;
+}
+
+#home #introduction{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2%;
+}
+
+#home #introduction .content h1{
+    text-align: left;
+}
+
+#home #introduction .content p{
+    text-align: left;
+}
+
+#home #introduction .content h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1.2;
+}
+
+#home #introduction .content span{
+    color: #ffd92e;
+    font-weight: 800;
+}
+
+
+#home #introduction .content .sub-content{
+    margin-top: 3%;
+    padding-bottom: 25px;
+    letter-spacing: 1.2px;
+    line-height: 1.8;
+}
+
+.upload{
+    text-align: left;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.upload-btn{
+    border-radius: 10px;
+
+
+}
+
+.upload .upload-btn:hover{
+    background-color: rgb(255, 255, 255,0.3);
+    color: #ffd92e;
+}
+
+#footer .contact{
+    text-align: center;
+    margin: 1% 9%;
+    background-color: rgb(255, 255, 255,0.2);
+    padding: 2.5% 0;
+}
+
+#footer .contact i{
+    color: #ffd92e;
+    padding-right: 50px;
+}
+
+#footer .contact i:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+/* contact us  */
+
+
+#contactUs{
+    width: 100%;
+    background: url('Images/contact.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+}
+#contactUs .image-overlay{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    
+}
+#intro{
+    padding-top: 0;
+    color: white;
+}
+
+#intro .heading .main-heading{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#intro .heading p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#intro .heading h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#contactForm{
+    color: white;
+    
+}
+
+.row .sub-heading{
+    font-size: 3rem;
+    
+}
+
+.row .card-bg p{
+    display: inline;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    padding-left: 1%;
+    
+}
+
+.row .icons .icon{
+    padding: 3%;
+    padding-bottom: 5%;
+    padding-right: 3%;
+}
+
+.row .icons a{
+    text-decoration: none;
+    color: white;
+    display: inline;
+
+    
+}
+
+
+#contactForm .contact-form .form-inputs{
+    background-color: rgb(0, 0, 0,0.4);
+    padding: 3%;
+    padding-top: 0;
+}
+
+
+.form-inputs .send-btn{
+    padding: 2.5% 3%;
+    letter-spacing: 2px;
+}
+
+
+/* faq */
+
+
+
+#faq{
+    width: 100%;
+    background: url('Images/faq2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    
+    
+}
+#faq .image-overlay{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    object-fit: cover;
+    
+}
+
+
+#faq .heading{
+    text-align: center;
+    margin-bottom: 4%;
+    
+    
+}
+#faq .heading .sub-heading{
+    padding: 1% 0;
+    background-color: rgb(255, 255, 255,0.2);
+    border-radius: 10px;
+    padding-bottom: 3%;
+}
+
+#faq .heading p{
+    font-size: 1.3rem;
+}
+
+#faq-content{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.total .item{
+    background-color: rgba(214, 236, 248, 0.3);
+    /* background-color: white; */
+    border-radius: .4rem ;
+    padding: 2%;
+    margin-bottom: 1%;
+    box-shadow: .5rem 2px .5rem rgba(0,0,0,0.3);
+}
+
+.total .link{
+    font-size: 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(214, 236, 248, 0.3);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-weight: 800;
+}
+.total .link:hover{
+    color: #ffd92e;
+}
+
+.total .link i{
+    color: #ffd92e;
+    padding: .5rem;
+}
+
+.total .link .minus{
+    display: none;
+}
+
+.total .answer{
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    /* background-color: rgb(49, 56, 60,0.7); */
+    background-color: rgb(255, 255, 255,0.5);
+    transition: max-height 500ms;
+}
+
+.total .answer::before{
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 95%;
+    background-color: #ffd92e;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.total .answer p{
+    font-size: 1.2rem;
+    /* color: rgb(255, 255, 255,0.8); */
+    padding: 2rem;
+    color: black;
+}
+
+.total  .item:target .answer{
+    max-height: 20rem;
+} 
+.total .item:target .link .plus{
+    display: none;
+}
+
+.total .item:target .link .minus{
+    display: block;
+} 
+
+
+.row .card-box{
+    margin: 3% 2%;
+    background-color: rgba(7, 65, 11, 0.5);
+    border-radius: .4rem ;
+    padding: 2%;
+    box-shadow: .5rem 2px .5rem rgba(50, 62, 50, 0.3);
+    margin-top: 1%;
+    
+}
+
+.row .card-box a{
+    width: 100%;
+    display: block;
+    margin: 1.5rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    font-weight: 800;
+}
+
+
+
+/* how to export  */
+
+
+#howTo{
+    width: 100%;
+    background: url('Images/howto.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    
+    
+}
+#howTo .image-overlay{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    
+}
+
+#howTo #introduction{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    
+}
+
+#howTo #introduction .heading h1{
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+#howTo #process .row{
+    margin: 2% 0;
+}
+
+#howTo #process .content{
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding-top: 5%;
+}
+
+#howTo #process .image-content{
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+#howTo #process .img-res{
+    width: 250px;
+    height: 450px;
+    /* padding-left: 50px; */
+}
+
+
+/* about us  */
+
+#aboutUs{
+    width: 100%;
+    background: url('Images/about.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    
+    
+}
+#aboutUs .image-overlay{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    
+}
+
+#aboutus #introduction{
+    text-align: center;
+    font-size: 3rem;
+}
+
+#aboutus #introduction .heading h1{
+    font-size: 3rem;
+}
+
+#aboutUs #about-content{
+    /* padding: 2%; */
+    font-size: 1.2rem;
+}
+
+#aboutUs #about-content .sub-content{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#aboutUs #about-content .sub-section p{
+    padding: 2%;
+    margin: 2%;
+    background-color: rgba(0, 0, 0, 0.2);
+}

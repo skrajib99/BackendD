@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Hi Welcome to Result Page </h1>
+    <!-- <pre>{{file_contents}}</pre> -->
+    <h2>The data that is being uploaded : </h2>
+    <div style="width: 100%;overflow:auto;text-align: center;border: 1px solid black;">
+        <pre>{{df.head(10)}}</pre>
+    </div>
+
+
+    <h1>Top Statistics : </h1>
+    <div style="display: flex; justify-content: space-between;margin: 2px;">
+        <div style="width: 23%; background-color: #f1f1f1; padding: 10px;"><h2>Total number of message : </h2><p>{{num_message}}</p></div>
+        <div style="width: 23%; background-color: #f1f1f1; padding: 10px;"><h2>Total number of words : </h2>{{len_of_total_words}}</div>
+        <div style="width: 23%; background-color: #f1f1f1; padding: 10px;"><h2>Total number of media shared : </h2>{{media_message}}</div>
+        <div style="width: 23%; background-color: #f1f1f1; padding: 10px;"><h2>Total number of links Shared : </h2>{{links}}</div>
+      </div>
+      
+      <h1>Most Busy User :</h1>
+      <div style="display:grid; grid-template-columns:70% 30%">
+        <div> 
+            <img src="data:image/png;base64,{{fig}}" style="height: max-content;width: max-content;">
+
+        </div>
+        <div style="padding: 2%;border: 1px solid black;">
+           <pre> {{new_df.head(10)}}</pre>
+        </div>
+      </div>
+      
+
+      
+      <h1>Word Cloud</h1>
+
+      <img src="data:image/png;base64,{{word_Cloud}}" style="height: 700px;width: 1000px;">
+
+      
+      <h1>Most Used/Common Words</h1>
+      <div style="max-width: 100%; max-height: 100%; overflow: auto;">
+        <img src="data:image/png;base64,{{most_common_words}}" height: "300px" width: "100%" object-fit: "contain" />
+       </div>
+
+
+       <h1>Emoji Analysis :</h1>
+       <div style="display:grid; grid-template-columns:30% 70%">
+        <div style="padding: 2%;border: 1px solid black;">
+          <pre> {{emoji_df}}</pre>
+        </div>
+         <div> 
+             <img src="data:image/png;base64,{{emoji_analysis}}" style="height: max-content;width: max-content;">
+ 
+         </div>
+       </div>
+    
+
+       <h1>Monthly Timeline :</h1>
+       <img src="data:image/png;base64,{{monthly_timeline}}" style="height: max-content;width: max-content;">
+ 
+
+       <h1>Daily Timeline :</h1>
+       <img src="data:image/png;base64,{{daily_timeline}}" style="height: max-content;width: max-content;">
+
+
+       <h1>Activity Map</h1>
+       <div style="display:grid; grid-template-columns:50% 50%">
+        <div>
+          <h2>Most Busy Day :</h2>
+          <img src="data:image/png;base64,{{most_busy_day}}">
+        </div>
+       <div>
+        <h2>Most Busy Month :</h2>
+        <img src="data:image/png;base64,{{most_busy_month}}" >
+      </div>
+       </div>
+ 
+      </div>
+
+</body>
+</html>

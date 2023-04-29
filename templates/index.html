@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+
+{% block body %} 
+
+    <!-- <section id="home">
+        <div class="image-overlay"> -->
+
+
+
+            <section id="introduction" class="wrap-sections">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="content">
+                            <h1>Chat Analysis of<br><span>WhatsApp</span> <br>Text Messeges</h1>
+                            <p class="sub-content">Get your WhatsApp chats analysed within seconds.<br>
+                                A hassle free, one step way. <br>
+                                Export your chats in .txt files and get your results.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                            <div class="col-lg-10">
+                                <!-- <div class="upload"> -->
+                                    <!-- <button class="btn btn-warning upload-btn" onclick="redirectToStreamlit()">UPLOAD</button> -->
+                                    <!-- <form action="/upload">
+                                    <button type="submit" class="btn btn-warning upload-btn">UPLOAD</button>
+                                    </form> -->
+                                    <!-- <form action="/upload" method="post" enctype="multipart/form-data">
+                                        <label for="file">Select file:</label>
+                                        <input type="file" id="file" name="file"><br>
+                                        <button type="submit" class="btn btn-warning upload-btn" value="Upload">UPLOAD</button>
+                                    </form> -->
+                                    <!-- <button type="button" class="btn btn-warning upload-btn">Upload Here : </button>
+                                    <label for="myfile"> </label>
+                                    <input type="file" id="myfile" name="myfile">  -->
+
+                                    <form action="{{ url_for('upload') }}" method="POST">
+                                        <button class="btn btn-warning upload-btn" type="submit">UPLOAD</button>
+                                    </form>
+                                <!-- </div> -->
+                            </div>
+                    </div>
+                </div>  
+            </section>
+
+            <script>
+                function redirectToStreamlit() {
+                    window.location.href = "{{ url_for('upload') }}";
+                }
+
+
+                // setTimeout(function(){
+                //     window.location.href = '{{redirect_url}}';
+                // }, 1000);
+            </script>
+
+
+ {%endblock %}        
+
+         
+              
+
+
