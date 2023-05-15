@@ -35,11 +35,21 @@
             </section>
 
 
-            <script type="text/javascript">
+            <!-- <script type="text/javascript">
                 function openStreamlit() {
                     window.open("http://localhost:8501/", "_blank");
                 }
+            </script> -->
+
+            <script>
+                function openStreamlit() {
+                fetch('/result')
+                    .then(response => response.json())
+                    .then(data => console.log(data));
+                }
+
             </script>
+            
             
 
 

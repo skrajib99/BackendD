@@ -1,14 +1,18 @@
 # pandas 
 # numpy
-# WordCloud
+WordCloud
 #emoji
 
 # i have to install urlextract for fetching the no of links  
 # I have to install re 
 
 
-# urlextract
-# regex
-# pandas
-# numpy
+urlextract
+regex
+pandas
+numpy
+Counter
+streamlit
+seaborn
+matplotlib
 emoji>=1.7.0

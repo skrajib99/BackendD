@@ -22,6 +22,15 @@ def home():
     # return 'Hello, World!'
     return render_template("index.html")
 
+
+@app.route("/result")
+def result():
+    # Start the Streamlit app in a new process using subprocess
+    streamlit_process = subprocess.Popen(["streamlit", "run", "result.py"])
+
+    # Return a JSON response to let the client know the Streamlit app has started
+    return jsonify(success=True)
+
 # @app.route('/upload', methods=['POST'])
 # def upload():
 
