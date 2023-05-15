@@ -119,16 +119,29 @@ def run_app():
 
             # emoji analysis
             emoji_df = helper.emoji_helper(selected_user,df)
-            st.title("Emoji Analysis")
 
-            col1,col2 = st.columns(2)
+            if len(emoji_df)==0:
+                st.title('No emojis used by the user')
+            else:    
+                st.title("Emoji Analysis")
 
-            with col1:
-                st.dataframe(emoji_df)
-            with col2:
-                fig,ax = plt.subplots()
-                ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(),autopct="%0.2f")
-                st.pyplot(fig)
+                col1,col2 = st.columns(2)
+
+                with col1:
+                    st.dataframe(emoji_df)
+                with col2:
+                    fig,ax = plt.subplots()
+                    ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(),autopct="%0.2f")
+                    st.pyplot(fig)
+
+
+            
+            #### Sentiment analysis
+
+            sentiment = helper.sentiment_analysis(selected_user,df)
+            st.title("Sentiment Analysis")
+
+            st.write('The Sentiment of the chat overall is ',sentiment)
 
 
 

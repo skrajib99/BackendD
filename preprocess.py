@@ -1,5 +1,7 @@
 import regex as re
 import pandas as pd
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+sia = SentimentIntensityAnalyzer()
 
 def preprocess(data) :
     pattern = '\d{1,2}\/\d{2,4}\/\d{2,4},\s\d{1,2}:\d{1,2}\s\w{1,2}\s-\s'
@@ -34,6 +36,10 @@ def preprocess(data) :
     df["day"]=df["date"].dt.day
     df["hour"] = df["date"].dt.hour
     df["minute"] = df["date"].dt.minute
+
+    df['positive'] = [sia.polarity_scores(i)["pos"] for i in df['message']]
+    df['negative'] = [sia.polarity_scores(i)["neg"] for i in df['message']]
+    df['neutral'] = [sia.polarity_scores(i)["neu"] for i in df['message']]
 
     period =[]
     for hour in df[['day_name','hour']]['hour']:

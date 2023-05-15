@@ -3,10 +3,12 @@
 
 {% block body %} 
 
-    <!-- <section id="home">
-        <div class="image-overlay"> -->
+    <section id="home">
+        <div class="image-overlay">
 
-
+            <nav>
+                {% include 'includes/nav.html' %}
+            </nav>
 
             <section id="introduction" class="wrap-sections">
 
@@ -23,39 +25,22 @@
                     
                     <div class="row">
                             <div class="col-lg-10">
-                                <!-- <div class="upload"> -->
-                                    <!-- <button class="btn btn-warning upload-btn" onclick="redirectToStreamlit()">UPLOAD</button> -->
-                                    <!-- <form action="/upload">
-                                    <button type="submit" class="btn btn-warning upload-btn">UPLOAD</button>
-                                    </form> -->
-                                    <!-- <form action="/upload" method="post" enctype="multipart/form-data">
-                                        <label for="file">Select file:</label>
-                                        <input type="file" id="file" name="file"><br>
-                                        <button type="submit" class="btn btn-warning upload-btn" value="Upload">UPLOAD</button>
-                                    </form> -->
-                                    <!-- <button type="button" class="btn btn-warning upload-btn">Upload Here : </button>
-                                    <label for="myfile"> </label>
-                                    <input type="file" id="myfile" name="myfile">  -->
+                                   
+                                    <button id="open-streamlit" class="btn btn-warning upload-btn" onclick="openStreamlit()">UPLOAD</button>
 
-                                    <form action="{{ url_for('upload') }}" method="POST">
-                                        <button class="btn btn-warning upload-btn" type="submit">UPLOAD</button>
-                                    </form>
-                                <!-- </div> -->
+                        
                             </div>
                     </div>
                 </div>  
             </section>
 
-            <script>
-                function redirectToStreamlit() {
-                    window.location.href = "{{ url_for('upload') }}";
+
+            <script type="text/javascript">
+                function openStreamlit() {
+                    window.open("http://localhost:8501/", "_blank");
                 }
-
-
-                // setTimeout(function(){
-                //     window.location.href = '{{redirect_url}}';
-                // }, 1000);
             </script>
+            
 
 
  {%endblock %}        

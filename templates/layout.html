@@ -13,43 +13,11 @@
     <script src="https://kit.fontawesome.com/1371d16ad6.js" crossorigin="anonymous"></script>
 
 
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-    <section id="home">
-        <div class="image-overlay">
-
-    <section id="nav-section" class="wrap-sections">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-                <a href="" class="navbar-brand logo-name">ChatMate</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-target" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapse-target">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="aboutUs.html" class="nav-link">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="howTo.html" class="nav-link">How to Export</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="faq.html" class="nav-link">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contactUs.html" class="nav-link">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </section>
-
+    
 
 
 {% block body %} {% endblock %}

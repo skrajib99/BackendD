@@ -18,18 +18,19 @@ import subprocess
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def home():
     # return 'Hello, World!'
     return render_template("index.html")
 
-@app.route('/upload',methods=['POST'])
-def upload():
+# @app.route('/upload', methods=['POST'])
+# def upload():
 
-    # Redirect to the Streamlit app URL
-    # return redirect('http://localhost:8501')
-     subprocess.Popen(['streamlit', 'run', 'result.py'])
+#     # Redirect to the Streamlit app URL
+#     # return redirect('http://localhost:8501')
+#     subprocess.Popen(['streamlit', 'run', 'result.py'])
 
-     return 'REDIRECTING'
+#     return 'REDIRECTING'
+#     # return render_template('index.html')
 
 
 
@@ -170,7 +171,7 @@ def upload():
 #         return 'Only .txt files are allowed'
 
 
-@app.route('/aboutUs',methods=['GET'])
+@app.route('/aboutUs')
 def about():
     return render_template("aboutUs.html")
 

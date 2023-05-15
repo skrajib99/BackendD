@@ -1,0 +1,32 @@
+<section id="nav-section" class="wrap-sections">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <a href="" class="navbar-brand logo-name">ChatMate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-target" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapse-target">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="{{ url_for('home') }}" class="nav-link active">Home</a>
+                    
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('about') }}" class="nav-link">About Us</a>
+                       
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('howTo') }}" class="nav-link">How to Export</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('faq') }}" class="nav-link">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('contact') }}" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>

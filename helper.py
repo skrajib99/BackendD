@@ -3,6 +3,8 @@ from urlextract import URLExtract
 import pandas as pd
 from collections import Counter
 import emoji
+from PIL import Image
+import numpy as np
 
 extractor = URLExtract()
 
@@ -74,6 +76,7 @@ def create_wordcloud(selected_user,df):
                 y.append(word)
                 
         return " ".join(y)
+        
 
     wc = WordCloud(width = 700,height = 700,min_font_size = 10,background_color="white")
     df_wc = wc.generate(temp['message'].str.cat(sep=" "))
@@ -174,3 +177,27 @@ def activity_heatmap(selected_user,df):
     activity_heatmap = df.pivot_table(index='day_name',columns='period',values='message',aggfunc='count').fillna(0)
 
     return activity_heatmap
+
+
+def sentiment_analysis(selected_user,df):
+    if selected_user != 'Overall':
+        df = df[df['user']== selected_user]
+
+    x = sum(df['positive'])
+    y = sum(df['negative'])
+    z = sum(df['neutral'])
+
+    sent = ""
+
+    def score(a,b,c):
+        if (a>b) and (a>c):
+            return ("Positive")
+        elif (b>c) and (b>a):
+            return ("Negative")
+        else:
+            return ("Neutral")
+
+
+    result = score(x,y,z)
+
+    return result
